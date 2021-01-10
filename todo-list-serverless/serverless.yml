@@ -1,0 +1,15 @@
+org: imnavas
+app: todo-list-serverless
+service: todo-list-serverless
+
+provider:
+  name: aws
+  runtime: python3.8
+
+functions:
+  hello:
+    handler: handler.hello
+    events:
+      - http:
+          path: /
+          method: get
